@@ -1,36 +1,204 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧑‍💼 Hiring Management Web App
 
-## Getting Started
+A simplified web application for managing job vacancies and job applications, built as part of a Frontend Engineer Case Study.
 
-First, run the development server:
+---
 
+## 📌 Project Overview
+
+Hiring Management Web App adalah platform yang memungkinkan:
+
+- **Admin (Recruiter)** untuk membuat, mengelola, dan memonitor lowongan serta pelamar.
+- **Applicant (Job Seeker)** untuk melihat lowongan aktif dan melamar melalui formulir dinamis berdasarkan konfigurasi backend.
+
+Aplikasi dikembangkan dengan prinsip modular, scalable, dan enterprise-grade.
+
+---
+
+## 🛠 Tech Stack Used
+
+### **Frontend**
+- Next.js / React
+- TypeScript
+- TailwindCSS
+- Zustand / Context API (state management)
+- React Hook Form + Zod (validasi dinamis)
+
+### **Backend / Data**
+- Supabase / Mock API JSON
+
+### **Other Tools**
+- Webcam & hand-gesture detection (TensorFlow / MediaPipe)
+- Deployment via Vercel
+- Playwright / Jest (opsional)
+
+---
+
+## ▶️ How to Run Locally
+
+### 1. Clone Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-repo/hiring-platform.git
+cd hiring-platform
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+pnpm install
+# atau
+npm install
+# atau
+yarn install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Setup Environment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Buat file .env.local dan isi:
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your_url
+NEXT_PUBLIC_SUPABASE_KEY=your_key
+```
 
-## Learn More
+Jika menggunakan mock API, environment dapat dikosongkan.
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Start Development Server
+```bash
+pnpm dev
+# atau
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Akses aplikasi di:
+http://localhost:3000
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### ⭐ Key Features Implemented
+### 👨‍💼 Admin Side
+### 1. Job List Page
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Menampilkan semua lowongan
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Sorting & filtering
+- Status badge (Active / Inactive / Draft)
+- “Manage Job” CTA
+- Modal Create Job
+
+### 2. Create Job
+
+- Form metadata lowongan
+- Konfigurasi field aplikasi (Mandatory / Optional / Off)
+- Validasi form sesuai PRD
+- Simpan konfigurasi ke backend
+
+### 3. Candidate Management Page
+
+- Tabel dinamis:
+
+ * Resize column (drag)
+
+Reorder column (drag & drop)
+
+Sorting & filtering
+
+Pagination
+
+Data pelamar tersusun mengikuti backend order
+
+🧑‍💼 Applicant Side
+1. Job List Page
+
+Daftar semua job aktif
+
+Status apakah sudah melamar
+
+Navigasi ke Job Detail
+
+2. Apply Job Form
+
+Field dirender dinamis berdasarkan backend:
+
+required: true → mandatory
+
+required: false → optional
+
+field tidak ada → hidden
+
+Validasi adaptif otomatis
+
+3. Webcam Photo + Gesture
+
+Deteksi gesture:
+
+Pose 1 → ready
+
+Pose 2 → focus
+
+Pose 3 → capture otomatis
+
+Preview & confirm photo
+
+4. Feedback State
+
+Success message
+
+Highlight error field pada gagal submit
+
+🚀 Optional Enhancements You Added
+
+Dark mode support
+
+Auto-save form draft
+
+Tooltip pada konfigurasi Admin
+
+Debounce pada pencarian lowongan
+
+Empty state illustration
+
+Loading skeleton (shimmer)
+
+Global error boundary
+
+Optimized image compression untuk profile photo
+
+🧩 Design or Logic Assumptions
+
+Field yang tidak ada di backend dianggap hidden
+
+Photo mandatory hanya untuk full-time positions
+
+Applicant hanya dapat apply sekali per job
+
+Sorting dilakukan di frontend saat menggunakan mock API
+
+Minimal column pelamar: name & email
+
+⚠️ Known Limitations
+
+Akurasi gesture detection tergantung kondisi pencahayaan
+
+Mock API belum mendukung filtering/pagination server-side
+
+Reorder column belum persistent ke backend
+
+Tidak semua edge case PRD tersedia di mock response
+
+🌐 Deployment & Credentials
+Live URL
+
+https://yourproject.vercel.app
+
+Admin Credentials
+email: admin@example.com
+password: 123456
+
+Applicant
+
+Tidak memerlukan login.
+
+📂 GitHub Repository
+
+https://github.com/your-repo/hiring-platform
+
+buat versi mackdown
