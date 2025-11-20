@@ -60,6 +60,7 @@ export default function CardJob({
           )}
         </div>
 
+        <div className="flex gap-4">
         {/* Manage Button */}
         {onManage && (
           <button
@@ -71,9 +72,10 @@ export default function CardJob({
         )}
         {onDelete && (
           <button className="btn bg-rk-danger-main text-white">
-            <TrashIcon />
+            <TrashIcon className="h-6" />
           </button>
         )}
+        </div>
       </div>
     </div>
   );

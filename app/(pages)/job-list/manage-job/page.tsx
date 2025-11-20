@@ -1,13 +1,13 @@
-"use client";
+"use client"
 import EmptyState from "@/app/_components/empty-state";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 import empty2 from "@/app/assets/EmptyState2.svg"
 import React from "react";
 import DataTable from "@/app/_components/data-table";
 
 export default function ManageJob() {
-  const searchParams = useSearchParams();
-  const title = searchParams.get("title");
+  // const searchParams = useSearchParams();
+  // const title = searchParams.get("title");
 
   const columns = [
     { key: "name", label: "NAMA LENGKAP" },
@@ -277,7 +277,7 @@ export default function ManageJob() {
 
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="text-[18px] leading-[28px] font-bold">{title}</h1>
+      <h1 className="text-[18px] leading-[28px] font-bold">testing</h1>
       <div className="rounded-lg border border-rk-neutral-40 p-6">
         {/* <EmptyState title="No candidates found" desc="Share your job vacancies so that more candidates will apply." image={empty2}/> */}
         
