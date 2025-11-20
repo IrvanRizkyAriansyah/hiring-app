@@ -1,6 +1,142 @@
 @import "tailwindcss";
+@plugin "daisyui"{
+  themes: light --default;
+};
 
-:root {
+/* override semua focus styles DaisyUI */
+input,
+textarea,
+select,
+button {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+@theme {
+  /* ========================
+     Warna Netral
+  ======================== */
+  --color-rk-neutral-10:  #FFFFFF;
+  --color-rk-neutral-20:  #FAFAFA;
+  --color-rk-neutral-30:  #E0E0E0;
+  --color-rk-neutral-40:  #D3D3D3;
+  --color-rk-neutral-50:  #C2C2C2;
+  --color-rk-neutral-60:  #9E9E9E;
+  --color-rk-neutral-70:  #757575;
+  --color-rk-neutral-80:  #616161;
+  --color-rk-neutral-90:  #404040;
+  --color-rk-neutral-100: #1D1F20;
+
+  /* ========================
+     Warna Utama (Primary)
+  ======================== */
+  --color-rk-primary-main:      #01959F;
+  --color-rk-primary-darken:    #4DB5BC;
+  --color-rk-primary-lighten:   #7ECFFF;
+  --color-rk-primary-hover:     #08A9FF;
+  --color-rk-primary-pressed:   #01595F;
+  --color-rk-primary-surface:   #F3FBFC;
+
+  /* ========================
+     Warna Secondary
+  ======================== */
+  --color-rk-secondary-main:      #FBC037;
+  --color-rk-secondary-border:    #FEEABC;
+  --color-rk-secondary-hover:     #F8A92F;
+  --color-rk-secondary-pressed:   #FA9810;
+  --color-rk-secondary-surface:   #FFFCF5;
+
+  /* ========================
+     Semantic: Danger
+  ======================== */
+  --color-rk-danger-main:      #E01428;
+  --color-rk-danger-border:    #F5B1B7;
+  --color-rk-danger-hover:     #BC1121;
+  --color-rk-danger-pressed:   #700A14;
+  --color-rk-danger-surface:   #FFF9FA;
+
+  /* ========================
+     Semantic: Warning
+  ======================== */
+  --color-rk-warning-main:        #CA7336;
+  --color-rk-warning-border:      #FEB17B;
+  --color-rk-warning-hover:       #B1652F;
+  --color-rk-warning-pressed:     #985628;
+  --color-rk-warning-surface:     #FCF7F3;
+
+  /* ========================
+     Semantic: Success
+  ======================== */
+  --color-rk-success-main:      #43936C;
+  --color-rk-success-border:    #B8DBCA;
+  --color-rk-success-hover:     #367A59;
+  --color-rk-success-pressed:   #20573D;
+  --color-rk-success-surface:   #F7F7F7;
+
+  /* ============================
+     Text XS
+  ============================= */
+  --text-rk-text-xs: 10px;
+  --leading-rk-text-xs: 16px;
+  --font-weight-rk-text-xs-regular: 400;
+  --font-weight-rk-text-xs-bold: 700;
+
+  /* ============================
+     Text S
+  ============================= */
+  --text-rk-text-s: 12px;
+  --leading-rk-text-s: 20px;
+  --font-weight-rk-text-s-regular: 400;
+  --font-weight-rk-text-s-bold: 700;
+
+  /* ============================
+     Text M
+  ============================= */
+  --text-rk-text-m: 14px;
+  --leading-rk-text-m: 24px;
+  --font-weight-rk-text-m-regular: 400;
+  --font-weight-rk-text-m-bold: 700;
+
+  /* ============================
+     Text L
+  ============================= */
+  --text-rk-text-l: 16px;
+  --leading-rk-text-l: 28px;
+  --font-weight-rk-text-l-regular: 400;
+  --font-weight-rk-text-l-bold: 700;
+
+  /* ============================
+     Heading S
+  ============================= */
+  --text-rk-heading-s: 20px;
+  --leading-rk-heading-s: 32px;
+  --font-weight-rk-heading-s-regular: 400;
+  --font-weight-rk-heading-s-bold: 700;
+
+  /* ============================
+     Heading M
+  ============================= */
+  --text-rk-heading-m: 24px;
+  --leading-rk-heading-m: 36px;
+  --font-weight-rk-heading-m-regular: 400;
+  --font-weight-rk-heading-m-bold: 700;
+
+  /* ============================
+     Heading L
+  ============================= */
+  --text-rk-heading-l: 32px;
+  --leading-rk-heading-l: 44px;
+  --font-weight-rk-heading-l-regular: 400;
+  --font-weight-rk-heading-l-bold: 700;
+
+  /* ============================
+     Display
+  ============================= */
+  --text-rk-display: 48px;
+  --leading-rk-display: 64px;
+  --font-weight-rk-display-bold: 700;
+}
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +159,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
