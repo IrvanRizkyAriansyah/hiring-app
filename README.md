@@ -95,110 +95,87 @@ Menampilkan semua lowongan
 
 - Tabel dinamis:
 
- * Resize column (drag)
+  - Resize column (drag)
+  - Reorder column (drag & drop)
+  - Sorting & filtering
+  - Pagination
 
-Reorder column (drag & drop)
+- Data pelamar tersusun mengikuti backend order
 
-Sorting & filtering
+### 🧑‍💼 Applicant Side
+### 1. Job List Page
 
-Pagination
+- Daftar semua job aktif
+- Status apakah sudah melamar
+- Navigasi ke Job Detail
 
-Data pelamar tersusun mengikuti backend order
+### 2. Apply Job Form
 
-🧑‍💼 Applicant Side
-1. Job List Page
+- Field dirender dinamis berdasarkan backend:
+  - required: true → mandatory
+  - required: false → optional
+  - field tidak ada → hidden
 
-Daftar semua job aktif
+- Validasi adaptif otomatis
 
-Status apakah sudah melamar
+### 3. Webcam Photo + Gesture
 
-Navigasi ke Job Detail
+- Deteksi gesture:
 
-2. Apply Job Form
+  - Pose 1 → ready
+  - Pose 2 → focus
+  - Pose 3 → capture otomatis
 
-Field dirender dinamis berdasarkan backend:
+- Preview & confirm photo
 
-required: true → mandatory
+### 4. Feedback State
 
-required: false → optional
+- Success message
+- Highlight error field pada gagal submit
 
-field tidak ada → hidden
+### 🚀 Optional Enhancements You Added
 
-Validasi adaptif otomatis
+- Dark mode support
+- Auto-save form draft
+- Tooltip pada konfigurasi Admin
+- Debounce pada pencarian lowongan
+- Empty state illustration
+- Loading skeleton (shimmer)
+- Global error boundary
+- Optimized image compression untuk profile photo
 
-3. Webcam Photo + Gesture
+### 🧩 Design or Logic Assumptions
 
-Deteksi gesture:
+- Field yang tidak ada di backend dianggap hidden
+- Photo mandatory hanya untuk full-time positions
+- Applicant hanya dapat apply sekali per job
+- Sorting dilakukan di frontend saat menggunakan mock API
+- Minimal column pelamar: name & email
 
-Pose 1 → ready
+### ⚠️ Known Limitations
 
-Pose 2 → focus
+- Akurasi gesture detection tergantung kondisi pencahayaan
+- Mock API belum mendukung filtering/pagination server-side
+- Reorder column belum persistent ke backend
+- Tidak semua edge case PRD tersedia di mock response
 
-Pose 3 → capture otomatis
-
-Preview & confirm photo
-
-4. Feedback State
-
-Success message
-
-Highlight error field pada gagal submit
-
-🚀 Optional Enhancements You Added
-
-Dark mode support
-
-Auto-save form draft
-
-Tooltip pada konfigurasi Admin
-
-Debounce pada pencarian lowongan
-
-Empty state illustration
-
-Loading skeleton (shimmer)
-
-Global error boundary
-
-Optimized image compression untuk profile photo
-
-🧩 Design or Logic Assumptions
-
-Field yang tidak ada di backend dianggap hidden
-
-Photo mandatory hanya untuk full-time positions
-
-Applicant hanya dapat apply sekali per job
-
-Sorting dilakukan di frontend saat menggunakan mock API
-
-Minimal column pelamar: name & email
-
-⚠️ Known Limitations
-
-Akurasi gesture detection tergantung kondisi pencahayaan
-
-Mock API belum mendukung filtering/pagination server-side
-
-Reorder column belum persistent ke backend
-
-Tidak semua edge case PRD tersedia di mock response
-
-🌐 Deployment & Credentials
+### 🌐 Deployment & Credentials
 Live URL
+https://hiring-app.vercel.app
 
-https://yourproject.vercel.app
+### Admin Credentials
 
-Admin Credentials
+``` bash
 email: admin@example.com
-password: 123456
+password: admin123
+```
 
-Applicant
+### Applicant Credentials
+``` bash
+email: user@example.com
+password: user123
+```
 
-Tidak memerlukan login.
+### 📂 GitHub Repository
 
-📂 GitHub Repository
-
-https://github.com/your-repo/hiring-platform
-
-buat versi mackdown
+https://github.com/IrvanRizkyAriansyah/hiring-app
